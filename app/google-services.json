@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1092159023108",
+    "project_id": "afyacorner-77c42",
+    "storage_bucket": "afyacorner-77c42.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1092159023108:android:9b50ea4835f47516f22d51",
+        "android_client_info": {
+          "package_name": "com.example.afyacorne"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1092159023108-hivaba1459bodvu1mpbstmup45u0adn4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXT23wFhJBB5CSI28AP0xp3xdRE4Fi45A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1092159023108-hivaba1459bodvu1mpbstmup45u0adn4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
