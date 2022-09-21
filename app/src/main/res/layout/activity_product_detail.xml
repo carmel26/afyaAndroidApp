@@ -1,9 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Home.ProductDetailActivity">
+    tools:context=".Home.ProductDetailActivity"
+    android:layout_margin="3dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/product_type_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Drug Type"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:fontFamily="@font/helveticabold" />
+
+    <ImageView
+        android:id="@+id/product_image_details"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:src="@drawable/select_product_image"
+        android:layout_below="@+id/product_type_details"
+        android:fontFamily="@font/helveticalight"
+        android:scaleType="centerCrop"/>
+
+
+
+    <TextView
+        android:id="@+id/product_description_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/product_image_details"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:text="Drug Description"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:fontFamily="@font/helveticalight"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/product_weight_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/product_description_details"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:fontFamily="@font/helveticalight"
+        android:text="Drug Stock quantity"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        />
+
+
+
+    <TextView
+        android:id="@+id/product_price_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/product_weight_details"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:fontFamily="@font/helveticalight"
+        android:text="Drug Price Price"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        />
+
+    <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+        android:id="@+id/product_number_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="6dp"
+        app:textSize="16dp"
+        app:initialNumber="1"
+        app:finalNumber="20"
+        android:fontFamily="@font/helveticalight"
+        android:gravity="center"
+        android:layout_below="@+id/product_price_details"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        >
+
+    </com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
+
+    <Button
+        android:id="@+id/pd_add_to_cart_detail_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:layout_margin="15dp"
+        android:layout_alignParentBottom="true"
+        android:text="Add to Cart"
+        android:fontFamily="@font/helveticabold"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        />
+</RelativeLayout>

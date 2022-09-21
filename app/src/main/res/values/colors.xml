@@ -16,7 +16,10 @@
 <!--    <color name="colorPrimaryDark">#897FC6</color>-->
 <!--    <color name="colorAccent">#785AFB</color>-->
 
-    <color name="colorPrimary">#E1533775</color>
-    <color name="colorPrimaryDark">#DA34016E</color>
+    <color name="colorPrimary">#234D8B</color>
+    <color name="colorPrimaryDark">#607D8B</color>
     <color name="colorAccent">#6D57CD</color>
+
+<!--    <item name="colorPrimaryDark">#FF9800</item>-->
+<!--    <item name="colorPrimary">#607D8B</item>-->
 </resources>

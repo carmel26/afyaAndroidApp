@@ -45,7 +45,7 @@ public class RegisterActivity extends AppCompatActivity {
 
         //        adding district
         String[] arraySpinner = new String[] {
-                "patient", "doctor",  "admin"
+                "Patient", "Doctor",  "Admins"
         };
         Spinner s = (Spinner) findViewById(R.id.district_select);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,

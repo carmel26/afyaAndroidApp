@@ -107,19 +107,16 @@ public class AddNewProductActivity extends AppCompatActivity {
         productDescription = inputProductDescription.getText().toString();
         productWeight = inputProductWeight.getText().toString();
         productType = inputProductType.getText().toString();
-        productDistrict = inputProductDistrict.getSelectedItem().toString();
         productPrice = inputProductPrice.getText().toString();
 
         if (imageUri == null){
-            Toast.makeText(this, "Product Image is Mandatory...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Drug Image is Mandatory...", Toast.LENGTH_SHORT).show();
         }else if (TextUtils.isEmpty(productDescription)){
-            Toast.makeText(this, "Please product description is Mandatory...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please Drug description is Mandatory...", Toast.LENGTH_SHORT).show();
         }else if (TextUtils.isEmpty(productWeight)){
-            Toast.makeText(this, "Please product weight is Mandatory...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please Drug weight is Mandatory...", Toast.LENGTH_SHORT).show();
         }else if (TextUtils.isEmpty(productPrice)){
-            Toast.makeText(this, "Please product price is Mandatory...", Toast.LENGTH_SHORT).show();
-        }else if (TextUtils.isEmpty(productDistrict)){
-            Toast.makeText(this, "Please product district is Mandatory...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please Drug price is Mandatory...", Toast.LENGTH_SHORT).show();
         }else{
             StoreImageInformation();
         }
@@ -127,8 +124,8 @@ public class AddNewProductActivity extends AppCompatActivity {
 
     private void StoreImageInformation() {
 
-        loadingBar.setTitle("Add new Animal");
-        loadingBar.setMessage("Please wait until we are adding new Animal...");
+        loadingBar.setTitle("Adding Operation");
+        loadingBar.setMessage("Please wait until we are adding this new drug...");
         loadingBar.setCanceledOnTouchOutside(false);
         loadingBar.show();
 

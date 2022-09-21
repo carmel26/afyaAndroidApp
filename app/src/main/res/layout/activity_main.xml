@@ -24,7 +24,7 @@
             android:fontFamily="@font/helveticabold"
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
-            android:textSize="22sp"
+            android:textSize="30sp"
             android:textStyle="bold" />
 
         <TextView

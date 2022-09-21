@@ -13,9 +13,10 @@
         <entry key="app/src/main/res/drawable/ic_baseline_add_shopping_cart_24.xml" value="0.10520833333333333" />
         <entry key="app/src/main/res/drawable/ic_baseline_credit_card_24.xml" value="0.10520833333333333" />
         <entry key="app/src/main/res/drawable/ic_baseline_login_24.xml" value="0.10520833333333333" />
+        <entry key="app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.11614583333333334" />
         <entry key="app/src/main/res/layout/activity_add_new_product.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_admin_category.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_admin_maintain_product.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_admin_maintain_product.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_buyer_order_list.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_cart.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.1" />
@@ -25,7 +26,8 @@
         <entry key="app/src/main/res/layout/activity_registe.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_registerctivity.xml" value="0.19322916666666667" />
-        <entry key="app/src/main/res/layout/app_bar_home.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_settings.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/app_bar_home.xml" value="0.25" />
         <entry key="app/src/main/res/layout/cart_items_layout.xml" value="0.18" />
         <entry key="app/src/main/res/layout/content_home.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_2home.xml" value="0.1" />
@@ -33,7 +35,9 @@
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_slideshow.xml" value="0.1" />
         <entry key="app/src/main/res/layout/nav_header_home.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/product_items_layout.xml" value="0.25" />
         <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.1" />
+        <entry key="app/src/main/res/menu/home.xml" value="0.1" />
       </map>
     </option>
   </component>

@@ -18,6 +18,12 @@
         android:theme="@style/Theme.AfyaCorner"
         tools:replace="android:icon, android:theme">
         <activity
+            android:name=".NewOrdersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false" />
+        <activity
             android:name=".AddNewProductActivity"
             android:exported="false" />
         <activity

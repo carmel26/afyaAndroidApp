@@ -1,9 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AdminCategoryActivity">
+    tools:context=".AdminCategoryActivity"
+    android:layout_centerVertical="true">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+
+        <TextView
+            android:id="@+id/slogan_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/helveticabold"
+            android:text="Choose type of Drug"
+            android:textAlignment="center"
+            android:textSize="26sp" />
+
+        <LinearLayout
+            android:id="@+id/linear1_category_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/slogan_category"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/drug3back"
+                android:layout_marginBottom="5dp"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:background="@drawable/inputs_design">
+
+                <ImageView
+                    android:id="@+id/drug3_category_admin"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/drug3" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/drug2back"
+                android:layout_marginBottom="5dp"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:background="@drawable/inputs_design">
+
+                <ImageView
+                    android:id="@+id/drug2_category_admin"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/drug2" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/drug1back"
+                android:layout_marginBottom="5dp"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:background="@drawable/inputs_design">
+
+                <ImageView
+                    android:id="@+id/drug1_category_admin"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/drug1" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear1_category_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/maintain_orders_adminCategory_btn"
+                android:layout_width="300dp"
+                android:layout_height="42dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_above="@+id/check_orders_adminCategory_btn"
+                android:background="@drawable/buttons"
+                android:text="Work on Drug"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:fontFamily="@font/helveticabold" />
+
+            <Button
+                android:id="@+id/check_orders_adminCategory_btn"
+                android:layout_width="300dp"
+                android:layout_height="42dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/buttons_edit"
+                android:text="Check Orders"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:fontFamily="@font/helveticabold" />
+
+            <Button
+                android:id="@+id/admin_logout_adminCategory_btn"
+                android:layout_width="300dp"
+                android:layout_height="42dp"
+                android:layout_above="@+id/check_orders_adminCategory_btn"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/buttons_delete"
+                android:text="Log out"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:fontFamily="@font/helveticabold" />
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

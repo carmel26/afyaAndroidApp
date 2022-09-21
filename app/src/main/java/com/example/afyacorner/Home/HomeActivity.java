@@ -20,6 +20,7 @@ import com.example.afyacorner.Cookies.Prevalent;
 import com.example.afyacorner.MainActivity;
 import com.example.afyacorner.Models.Product;
 import com.example.afyacorner.R;
+import com.example.afyacorner.SettingsActivity;
 import com.example.afyacorner.ViewHolder.ProductViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
@@ -147,10 +148,13 @@ public class HomeActivity extends AppCompatActivity {
                         startActivity(intent);
                     }
                 }else  if (id == R.id.nav_category){
-                    if (!typeUser.equals("Admins") && !categoryUser.equals("buyer")) {
+//                    if (!typeUser.equals("Admins")) {
                         Intent intent = new Intent(HomeActivity.this, AdminCategoryActivity.class);
                         startActivity(intent);
-                    }
+//                    }
+                }else  if (id == R.id.nav_settings){
+                        Intent intent = new Intent(HomeActivity.this, SettingsActivity.class);
+                        startActivity(intent);
                 }else  if (id == R.id.nav_logout){
                     Paper.book().destroy();
                     Intent intent = new Intent(HomeActivity.this, MainActivity.class);
@@ -199,7 +203,7 @@ public class HomeActivity extends AppCompatActivity {
         }else{
             options =
                     new FirebaseRecyclerOptions.Builder<Product>()
-                            .setQuery(productReference.orderByChild("productStatus").equalTo("Approved"), Product.class)
+                            .setQuery(productReference, Product.class)
                             .build();
         }
 
@@ -230,17 +234,17 @@ public class HomeActivity extends AppCompatActivity {
 
                         holder.txtProductPrice.setText("Price: "+price+"");
                         holder.txtProductDescription.setText(model.getDescription());
-                        holder.txtProductWeight.setText("Weight: "+weight+" Kg");
+                        holder.txtProductWeight.setText("Quantity: "+weight+"");
 
-                        if (model.getProductStatus().equals("Not Approved")){
-                            holder.txtProductType.setText(model.getType()+"(Not Approved)");
-                            holder.txtProductType.setTextColor(Color.parseColor("#8f0e0e"));
-                            holder.txtProductWeight.setTextColor(Color.parseColor("#8f0e0e"));
-                            holder.txtProductPrice.setTextColor(Color.parseColor("#8f0e0e"));
-                        }else{
+//                        if (model.getProductStatus().equals("Not Approved")){
+//                            holder.txtProductType.setText(model.getType()+"(Not Approved)");
+//                            holder.txtProductType.setTextColor(Color.parseColor("#8f0e0e"));
+//                            holder.txtProductWeight.setTextColor(Color.parseColor("#8f0e0e"));
+//                            holder.txtProductPrice.setTextColor(Color.parseColor("#8f0e0e"));
+//                        }else{
                             holder.txtProductType.setText(model.getType());
                             holder.txtProductPrice.setTextColor(Color.parseColor("#000000"));
-                        }
+//                        }
 
                         Picasso.get().load(model.getImage()).into(holder.productImageView);
 

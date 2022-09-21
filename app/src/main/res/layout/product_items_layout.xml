@@ -17,8 +17,9 @@
             android:id="@+id/product_type_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Animal Type"
+            android:text="Drug name"
             android:textAlignment="center"
+            android:fontFamily="@font/helveticabold"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -32,45 +33,42 @@
             android:scaleType="centerCrop"
             android:layout_marginTop="2dp"/>
 
+
+        <TextView
+            android:id="@+id/product_weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/product_image"
+            android:gravity="center"
+            android:text="Drug Quantity"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="13dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/product_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/product_weight"
+            android:gravity="center"
+            android:text="Drug Price"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="13dp"
+            android:textStyle="bold" />
+
         <TextView
             android:id="@+id/product_description"
-            android:layout_below="@+id/product_image"
+            android:layout_below="@+id/product_price"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Animal Description"
+            android:fontFamily="@font/helveticabold"
             android:textAlignment="center"
             android:textSize="14dp"
             android:textColor="@color/colorPrimaryDark"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="3dp"
-            android:layout_below="@+id/product_description"
-            android:orientation="horizontal"
-            android:layout_marginBottom="2dp"
-            android:gravity="center">
-            <TextView
-                android:id="@+id/product_weight"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="30dp"
-                android:text="Animal Height"
-                android:textAlignment="center"
-                android:textColor="@color/colorPrimary"
-                android:textSize="13dp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/product_price"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Animal Price"
-                android:textAlignment="center"
-                android:textColor="@color/colorPrimary"
-                android:textSize="13dp"
-                android:textStyle="bold" />
-        </LinearLayout>
 
 
     </RelativeLayout>

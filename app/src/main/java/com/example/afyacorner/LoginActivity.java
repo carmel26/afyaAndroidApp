@@ -14,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.example.afyacorner.Home.HomeActivity;
 import com.example.afyacorner.Models.User;
 import com.example.afyacorner.Cookies.Prevalent;
 import com.google.firebase.database.DataSnapshot;
@@ -115,34 +116,21 @@ public class LoginActivity extends AppCompatActivity {
         rootRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+
                 if(snapshot.child(parentDbName).child(phoneNumber).exists()){
                     // the user can login
+                    System.out.println("Hello inside ..... "+parentDbName);
                     User userData = snapshot.child(parentDbName).child(phoneNumber).getValue(User.class);
                     if (userData.getPhone().equalsIgnoreCase(phoneNumber)){
                         if (userData.getPassword().equalsIgnoreCase(password)){
 
-                            if (parentDbName.equals("Admins")){
-                                Toast.makeText(LoginActivity.this, "Welcome Admin in Successfully...", Toast.LENGTH_SHORT).show();
-                                loadingBar.dismiss();
-                                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                                Prevalent.currentOnlineUser = userData;
-                                Prevalent.userGroup = "Admins";
-                                startActivity(intent);
-                            }else if (parentDbName.equals("Patient")){
                                 Toast.makeText(LoginActivity.this, "Logged in Successfully!!", Toast.LENGTH_SHORT).show();
                                 loadingBar.dismiss();
-                                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                                 Prevalent.currentOnlineUser = userData;
-                                Prevalent.userGroup = "Users";
+                                Prevalent.userGroup = userData.getTypeUser();
                                 startActivity(intent);
-                            }else if (parentDbName.equals("Doctor")){
-                                Toast.makeText(LoginActivity.this, "Logged in Successfully!!", Toast.LENGTH_SHORT).show();
-                                loadingBar.dismiss();
-                                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                                Prevalent.currentOnlineUser = userData;
-                                Prevalent.userGroup = "Users";
-                                startActivity(intent);
-                            }
+
                         }else {
                             loadingBar.dismiss();
                             Toast.makeText(LoginActivity.this, "Wrong Credentials ... Password not correct", Toast.LENGTH_SHORT).show();
