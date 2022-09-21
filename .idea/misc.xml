@@ -13,6 +13,7 @@
         <entry key="app/src/main/res/drawable/ic_baseline_add_shopping_cart_24.xml" value="0.10520833333333333" />
         <entry key="app/src/main/res/drawable/ic_baseline_credit_card_24.xml" value="0.10520833333333333" />
         <entry key="app/src/main/res/drawable/ic_baseline_login_24.xml" value="0.10520833333333333" />
+        <entry key="app/src/main/res/layout/activity_add_new_product.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_admin_category.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_admin_maintain_product.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_buyer_order_list.xml" value="0.1" />

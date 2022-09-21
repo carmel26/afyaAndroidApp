@@ -35,8 +35,8 @@ public class RegisterActivity extends AppCompatActivity {
     private Button createAccountBtn;
     private EditText inputName, inputPhoneNumber,addressInput,emailInput,
             inputPassword, inputValidatePassword;
-    private CheckBox sellerOrBuyer;
     private ProgressDialog loadingBar;
+    private Spinner inputProductDistrict;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +60,7 @@ public class RegisterActivity extends AppCompatActivity {
         inputValidatePassword = findViewById(R.id.register_validate_password_input);
         emailInput = findViewById(R.id.register_email_input);
         addressInput = findViewById(R.id.register_Address_input);
+        inputProductDistrict = findViewById(R.id.district_select);
 
         loadingBar = new ProgressDialog(this);
 
@@ -87,7 +88,7 @@ public class RegisterActivity extends AppCompatActivity {
         String password = inputPassword.getText().toString();
         String address = addressInput.getText().toString();
         String email = emailInput.getText().toString();
-        String sellerOrNot = "";
+        String sellerOrNot = inputProductDistrict.getSelectedItem().toString();
 
         if (name == null || TextUtils.isEmpty(name)) {
             Toast.makeText(this, "Please give a name ...", Toast.LENGTH_SHORT).show();

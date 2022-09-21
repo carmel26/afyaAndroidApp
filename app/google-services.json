@@ -1,34 +1,41 @@
 {
   "project_info": {
-    "project_number": "1092159023108",
-    "firebase_url": "https://afyacorner-77c42-default-rtdb.firebaseio.com",
-    "project_id": "afyacorner-77c42",
-    "storage_bucket": "afyacorner-77c42.appspot.com"
+    "project_number": "313590584326",
+    "project_id": "afyacorner1-e2dd7",
+    "storage_bucket": "afyacorner1-e2dd7.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1092159023108:android:ff5b1640afc1c85bf22d51",
+        "mobilesdk_app_id": "1:313590584326:android:babf920242134b3fa6df87",
         "android_client_info": {
           "package_name": "com.example.afyacorner"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1092159023108-hivaba1459bodvu1mpbstmup45u0adn4.apps.googleusercontent.com",
+          "client_id": "313590584326-kvascblso93r8mrma849svdgeg579q6f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.afyacorner",
+            "certificate_hash": "32ce26981697869468686fa1a20fd9d604ef3ad5"
+          }
+        },
+        {
+          "client_id": "313590584326-gp5ip17uc26qk5732mu4lco9t604o1iu.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAXT23wFhJBB5CSI28AP0xp3xdRE4Fi45A"
+          "current_key": "AIzaSyAHDJrRsiyA5ubPdl212JcSqSo-3bjHfFM"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "1092159023108-hivaba1459bodvu1mpbstmup45u0adn4.apps.googleusercontent.com",
+              "client_id": "313590584326-gp5ip17uc26qk5732mu4lco9t604o1iu.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

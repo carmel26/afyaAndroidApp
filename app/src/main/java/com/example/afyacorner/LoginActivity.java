@@ -96,6 +96,7 @@ public class LoginActivity extends AppCompatActivity {
             loadingBar.setCanceledOnTouchOutside(false);
             loadingBar.show();
 
+            System.out.println("Test");
             AllowAccessToAccount(phoneNumber, password);
 
         }
