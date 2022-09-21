@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.afyacorner">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
         android:allowBackup="true"
@@ -12,7 +15,28 @@
         android:label="@string/app_name"
         android:roundIcon="@drawable/afyalogo"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AfyaCorner">
+        android:theme="@style/Theme.AfyaCorner"
+        tools:replace="android:icon, android:theme">
+        <activity
+            android:name=".Home.ProductDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminMaintainProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminCategoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BuyerOrderListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Home.HomeActivity"
+            android:exported="false"
+            android:label="@string/title_activity_home"
+            android:theme="@style/Theme.AfyaCorner.NoActionBar" />
         <activity
             android:name=".RegisterActivity"
             android:exported="false" />

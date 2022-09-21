@@ -1,15 +1,16 @@
 {
   "project_info": {
     "project_number": "1092159023108",
+    "firebase_url": "https://afyacorner-77c42-default-rtdb.firebaseio.com",
     "project_id": "afyacorner-77c42",
     "storage_bucket": "afyacorner-77c42.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1092159023108:android:9b50ea4835f47516f22d51",
+        "mobilesdk_app_id": "1:1092159023108:android:ff5b1640afc1c85bf22d51",
         "android_client_info": {
-          "package_name": "com.example.afyacorne"
+          "package_name": "com.example.afyacorner"
         }
       },
       "oauth_client": [

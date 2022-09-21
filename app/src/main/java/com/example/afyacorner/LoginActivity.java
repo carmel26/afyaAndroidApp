@@ -127,7 +127,14 @@ public class LoginActivity extends AppCompatActivity {
                                 Prevalent.currentOnlineUser = userData;
                                 Prevalent.userGroup = "Admins";
                                 startActivity(intent);
-                            }else if (parentDbName.equals("Users")){
+                            }else if (parentDbName.equals("Patient")){
+                                Toast.makeText(LoginActivity.this, "Logged in Successfully!!", Toast.LENGTH_SHORT).show();
+                                loadingBar.dismiss();
+                                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                Prevalent.currentOnlineUser = userData;
+                                Prevalent.userGroup = "Users";
+                                startActivity(intent);
+                            }else if (parentDbName.equals("Doctor")){
                                 Toast.makeText(LoginActivity.this, "Logged in Successfully!!", Toast.LENGTH_SHORT).show();
                                 loadingBar.dismiss();
                                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);

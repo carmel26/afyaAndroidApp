@@ -3,8 +3,9 @@ package com.example.afyacorner.Cookies;
 import com.example.afyacorner.Models.User;
 
 public class Prevalent {
-    public static String userPhoneKey;
-    public static String userPasswordKey;
     public static User currentOnlineUser;
-    public static String userGroup;
+
+    public static final String userPhoneKey = "UserPhone";
+    public static final String userPasswordKey = "UserPasswordKey";
+    public static String userGroup = "Users";
 }

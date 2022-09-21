@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         joinNowBtn = findViewById(R.id.main_join_now_btn);
         loginBtn = findViewById(R.id.main_login_btn);
         loadingBar = new ProgressDialog(this);
-        sellerBegin = findViewById(R.id.seller_begin);
+
 
         Paper.init(this);
 
@@ -61,13 +61,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//        sellerBegin.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(MainActivity.this, SellerRegistrationActivity.class);
-//                startActivity(intent);
-//            }
-//        });
 
         String userPhoneKey = Paper.book().read(Prevalent.userPhoneKey);
         String userPasswordKey = Paper.book().read(Prevalent.userPasswordKey);

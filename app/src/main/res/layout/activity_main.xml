@@ -18,32 +18,34 @@
             android:id="@+id/app_slogan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Afya Corner "
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:text="AFYA CORNER "
+            android:fontFamily="@font/helveticabold"
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
             android:textSize="22sp"
-            android:layout_marginBottom="10dp"
-            android:layout_centerHorizontal="true"
-            android:textStyle="bold|italic" />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/app_slogan2"
             android:layout_width="wrap_content"
-            android:layout_below="@+id/app_slogan"
             android:layout_height="wrap_content"
-            android:text="inawakaribisha mu Hudmiwe"
+            android:layout_below="@+id/app_slogan"
             android:layout_centerHorizontal="true"
+            android:text="Inawakaribisha mu Hudumiwe"
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/helveticabold"
             android:textSize="22sp"
-            android:textStyle="bold|italic" />
+            android:textStyle="bold" />
 
 
         <ImageView
             android:id="@+id/app_logo"
-            android:layout_width="300dp"
+            android:layout_width="350dp"
+            android:layout_height="200dp"
             android:layout_below="@+id/app_slogan2"
-            android:layout_height="100dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
             android:src="@drawable/afyalogopages" />
@@ -58,8 +60,8 @@
             android:layout_marginTop="10dp"
             android:layout_marginRight="15dp"
             android:gravity="center"
-            android:padding="20dp"
-            android:text="Join now...!"
+            android:padding="15dp"
+            android:text="Click to Join now...!"
             android:textAllCaps="false"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="20sp" />
@@ -68,34 +70,18 @@
             android:id="@+id/main_login_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginRight="15dp"
-            android:layout_marginLeft="15dp"
             android:layout_below="@+id/main_join_now_btn"
-            android:background="@drawable/buttons"
-            android:padding="20dp"
+            android:layout_marginLeft="15dp"
             android:layout_marginTop="10dp"
-            android:textAllCaps="false"
-            android:textSize="18sp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/buttons"
+            android:padding="10dp"
             android:text="Already have an Account? Login"
+            android:textAllCaps="false"
             android:textColor="@color/white"
-            />
+            android:textSize="18sp" />
 
     </RelativeLayout>
 
-
-    <TextView
-        android:id="@+id/seller_begin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Want to become a seller?"
-        android:textSize="15dp"
-        android:textColor="@color/colorPrimaryDark"
-        android:textStyle="bold"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:visibility="invisible"
-        android:layout_marginRight="17dp"
-        android:layout_marginBottom="10dp"
-        />
-
+v
 </RelativeLayout>

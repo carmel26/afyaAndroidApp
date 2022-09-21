@@ -45,7 +45,7 @@ public class RegisterActivity extends AppCompatActivity {
 
         //        adding district
         String[] arraySpinner = new String[] {
-                "doctor", "patient", "admin"
+                "patient", "doctor",  "admin"
         };
         Spinner s = (Spinner) findViewById(R.id.district_select);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
@@ -88,16 +88,6 @@ public class RegisterActivity extends AppCompatActivity {
         String address = addressInput.getText().toString();
         String email = emailInput.getText().toString();
         String sellerOrNot = "";
-        if (sellerOrBuyer.isChecked()){
-            sellerOrNot = "seller";
-            if (address == null || TextUtils.isEmpty(address)) {
-                Toast.makeText(this, "Please give address of your Live stock ...", Toast.LENGTH_SHORT).show();
-                finish();
-            }
-        }else{
-            sellerOrNot = "buyer";
-        }
-
 
         if (name == null || TextUtils.isEmpty(name)) {
             Toast.makeText(this, "Please give a name ...", Toast.LENGTH_SHORT).show();
@@ -120,8 +110,7 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private void validatePhoneNumber(String nameSave, String phoneNumberSave, String passwordSave, String emailSave, String addressSave, String SellerOrNotSave) {
-        final DatabaseReference rootRef;
-        rootRef = FirebaseDatabase.getInstance().getReference();
+        final DatabaseReference rootRef = FirebaseDatabase.getInstance().getReference();
 
         rootRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override

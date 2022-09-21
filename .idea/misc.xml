@@ -7,10 +7,32 @@
         <entry key="app/src/main/res/drawable-v24/buttons_add.xml" value="0.20615384615384616" />
         <entry key="app/src/main/res/drawable/buttons.xml" value="0.20615384615384616" />
         <entry key="app/src/main/res/drawable/buttons_add.xml" value="0.20615384615384616" />
+        <entry key="app/src/main/res/drawable/buttons_delete.xml" value="0.1125" />
         <entry key="app/src/main/res/drawable/buttons_edit.xml" value="0.20615384615384616" />
+        <entry key="app/src/main/res/drawable/ic_baseline_add_box_24.xml" value="0.10520833333333333" />
+        <entry key="app/src/main/res/drawable/ic_baseline_add_shopping_cart_24.xml" value="0.10520833333333333" />
+        <entry key="app/src/main/res/drawable/ic_baseline_credit_card_24.xml" value="0.10520833333333333" />
+        <entry key="app/src/main/res/drawable/ic_baseline_login_24.xml" value="0.10520833333333333" />
+        <entry key="app/src/main/res/layout/activity_admin_category.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_admin_maintain_product.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_buyer_order_list.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_cart.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_home.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/activity_product_detail.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_registe.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_registerctivity.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/app_bar_home.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/cart_items_layout.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/content_home.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_2home.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_slideshow.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/nav_header_home.xml" value="0.1" />
+        <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.1" />
       </map>
     </option>
   </component>

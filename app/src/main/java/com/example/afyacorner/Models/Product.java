@@ -1,4 +1,4 @@
-package com.example.afyacorner.Model;
+package com.example.afyacorner.Models;
 
 public class Product {
     private String category,date,description, prodId,
