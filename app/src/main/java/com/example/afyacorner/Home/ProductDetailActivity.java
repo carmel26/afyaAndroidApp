@@ -44,6 +44,8 @@ public class ProductDetailActivity extends AppCompatActivity {
             productSellerName = "",
             state = "Normal";
 
+    private String oldQuantity = "0";
+
 
     private static String PRODUCT_REF = "Products";
 
@@ -56,6 +58,7 @@ public class ProductDetailActivity extends AppCompatActivity {
         productID = getIntent().getStringExtra("pid");
         productSellerID = getIntent().getStringExtra("sellerId");
         productSellerName = getIntent().getStringExtra("sellerName");
+        oldQuantity = getIntent().getStringExtra("OldQuantity");
 
         numberButton = findViewById(R.id.product_number_detail);
         productImage = findViewById(R.id.product_image_details);
@@ -64,6 +67,7 @@ public class ProductDetailActivity extends AppCompatActivity {
         productWeight = findViewById(R.id.product_weight_details);
         productType = findViewById(R.id.product_type_details);
         addToCart = findViewById(R.id.pd_add_to_cart_detail_product);
+
 
 
         getProductDetails(productID);
@@ -152,6 +156,32 @@ public class ProductDetailActivity extends AppCompatActivity {
                                                         .addOnCompleteListener(new OnCompleteListener<Void>() {
                                                             @Override
                                                             public void onComplete(@NonNull Task<Void> task) {
+
+                                                                final DatabaseReference databaseReference =
+                                                                        FirebaseDatabase.getInstance().getReference().child("Products");
+                                                                databaseReference.child(productID).addListenerForSingleValueEvent(new ValueEventListener() {
+                                                                    @Override
+                                                                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                                                        int oldQuantityFirebase = Integer.parseInt(snapshot.child("quantity").getValue().toString());
+                                                                        int oldQuantityCart = 0;
+                                                                        if (oldQuantity != null){
+                                                                            if (!oldQuantity.equals("")) {
+                                                                                oldQuantityCart = Integer.parseInt(oldQuantity);
+                                                                            }
+                                                                        }
+                                                                        int difference =  Integer.parseInt(numberButton.getNumber()) - oldQuantityCart;
+                                                                        int newQuantity = oldQuantityFirebase -  (difference);
+                                                                        HashMap<String, Object> newForDataBase = new HashMap<>();
+                                                                        newForDataBase.put("quantity", ""+newQuantity);
+                                                                        databaseReference.child(productID).updateChildren(newForDataBase);
+                                                                    }
+
+                                                                    @Override
+                                                                    public void onCancelled(@NonNull DatabaseError error) {
+
+                                                                    }
+                                                                });
+
                                                                 Toast.makeText(ProductDetailActivity.this, "Added to the cart list", Toast.LENGTH_SHORT).show();
                                                                 Intent intent = new Intent(ProductDetailActivity.this, HomeActivity.class);
                                                                 startActivity(intent);
@@ -194,12 +224,13 @@ public class ProductDetailActivity extends AppCompatActivity {
 
                     DecimalFormat df = new DecimalFormat();
                     df.setMaximumFractionDigits(2);
-                    String weight = df.format(Integer.parseInt(product.getWeight(), 10));
+                    String weight = df.format(Integer.parseInt(product.getQuantity(), 10));
 
                     productType.setText(product.getType());
                     productDescription.setText(product.getDescription());
                     productWeight.setText(weight+" ");
                     productPrice.setText(price);
+//                    numberButton.setNumber(product.getQuantity());
                     Picasso.get().load(product.getImage()).into(productImage);
                 }
             }

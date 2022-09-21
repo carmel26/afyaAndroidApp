@@ -17,12 +17,17 @@
         <entry key="app/src/main/res/layout/activity_add_new_product.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_admin_category.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_admin_maintain_product.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_admin_new_orders.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/activity_admin_user_products.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_buyer_order_list.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_cart.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_confirm_final_order.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/activity_new_orders.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_product_detail.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_products.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_registe.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_registerctivity.xml" value="0.19322916666666667" />
@@ -35,6 +40,7 @@
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_slideshow.xml" value="0.1" />
         <entry key="app/src/main/res/layout/nav_header_home.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/orders_layout.xml" value="0.33" />
         <entry key="app/src/main/res/layout/product_items_layout.xml" value="0.25" />
         <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.1" />
         <entry key="app/src/main/res/menu/home.xml" value="0.1" />

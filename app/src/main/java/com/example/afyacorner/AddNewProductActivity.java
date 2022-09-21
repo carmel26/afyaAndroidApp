@@ -193,7 +193,7 @@ public class AddNewProductActivity extends AppCompatActivity {
         productMap.put("description", productDescription);
         productMap.put("district", productDistrict);
         productMap.put("image", downloadImageUrl);
-        productMap.put("weight", productWeight);
+        productMap.put("quantity", productWeight);
         productMap.put("category", categoryName);
         productMap.put("price", productPrice);
         productMap.put("selectedStatus", "Not Selected");

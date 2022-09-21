@@ -60,6 +60,7 @@ public class AdminMaintainProductActivity extends AppCompatActivity {
         applyChangesBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                System.out.println("Quantity1: "+weigthDrug.getText().toString());
                 applyChanges();
             }
         });
@@ -157,24 +158,28 @@ public class AdminMaintainProductActivity extends AppCompatActivity {
         String description = descriptionDrug.getText().toString();
         String price = priceDrug.getText().toString();
         String weight = weigthDrug.getText().toString();
+
+        System.out.println("Quantity2: "+weight);
 //        String image = .getText().toString();
 
         if (typeProduct.equals("")){
-            Toast.makeText(this, "Please write a Name of this Drug", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please give a Name of this Drug", Toast.LENGTH_SHORT).show();
         }else if (description.equals("")){
-            Toast.makeText(this, "Please write a Description of this Drug", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please give a Description of this Drug", Toast.LENGTH_SHORT).show();
         }else if (price.equals("")){
-            Toast.makeText(this, "Please write a Price of this Drug", Toast.LENGTH_SHORT).show();
-        }else if (weight.equals("")){
-            Toast.makeText(this, "Please write a Weigth of this Drug", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please give a Price of this Drug", Toast.LENGTH_SHORT).show();
+        }else if (weight.equals("") || Integer.parseInt(weight)<= 0){
+            Toast.makeText(this, "Please give a Quantity of this Drug", Toast.LENGTH_SHORT).show();
         }else{
             HashMap<String, Object> productMap = new HashMap<>();
             productMap.put("prodId", productId);
             productMap.put("description", description);
 //            productMap.put("image", animalImage);
-            productMap.put("Quantity", weight);
+            productMap.put("quantity", weight);
             productMap.put("price", price);
             productMap.put("type", typeProduct.toUpperCase());
+
+            System.out.println(" data: "+productMap);
 
             productReference.updateChildren(productMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
@@ -207,7 +212,7 @@ public class AdminMaintainProductActivity extends AppCompatActivity {
                 if (snapshot.exists()){
                     String productType = snapshot.child("type").getValue().toString();
                     String productDescription = snapshot.child("description").getValue().toString();
-                    String productWeight = snapshot.child("weight").getValue().toString();
+                    String productWeight = snapshot.child("quantity").getValue().toString();
                     String productPrice = snapshot.child("price").getValue().toString();
                     String productImage = snapshot.child("image").getValue().toString();
 

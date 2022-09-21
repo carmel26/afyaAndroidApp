@@ -2,16 +2,17 @@ package com.example.afyacorner.Models;
 
 public class Product {
     private String category,date,description, prodId,
-            district,image,price,time,type,weight,
+            district,image,price,time,type,quantity,
             productStatus,sellerName,sellerEmail,
-            selectedStatus, sellerId;
+            selectedStatus, sellerId,weight;
 
     public Product() {
     }
 
     public Product(String category, String date, String description, String district,
                    String image, String price, String time, String type, String weight,
-    String sellerName, String productStatus, String sellerEmail, String selectedStatus, String sellerId) {
+    String sellerName, String productStatus, String sellerEmail, String selectedStatus,
+                   String sellerId, String quantity) {
         this.category = category;
         this.date = date;
         this.description = description;
@@ -21,11 +22,20 @@ public class Product {
         this.time = time;
         this.type = type;
         this.weight = weight;
+        this.quantity = quantity;
         this.sellerEmail = sellerEmail;
         this.sellerName = sellerName;
         this.productStatus = productStatus;
         this.selectedStatus = selectedStatus;
         this.sellerId = sellerId;
+    }
+
+    public String getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(String quantity) {
+        this.quantity = quantity;
     }
 
     public String getSellerId() {

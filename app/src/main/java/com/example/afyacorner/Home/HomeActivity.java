@@ -77,7 +77,7 @@ public class HomeActivity extends AppCompatActivity {
 
 //        typeUser = getIntent().getExtras().get("Admin").toString();
         typeUser = Prevalent.userGroup;
-        categoryUser = Prevalent.currentOnlineUser.getTypeUser();
+        categoryUser = typeUser;
 
         Paper.init(this);
         productReference = FirebaseDatabase.getInstance().getReference().child(PRODUCTREFERENCE);
@@ -174,11 +174,12 @@ public class HomeActivity extends AppCompatActivity {
         TextView userNameTextView = headView.findViewById(R.id.user_profile_name);
         CircleImageView profileImageView = headView.findViewById(R.id.user_profile_image);
 
-        if (!typeUser.equals("Admins")){
+        if (!typeUser.equals("Admins") && Prevalent.currentOnlineUser.getName() != null){
             userNameTextView.setText(Prevalent.currentOnlineUser.getName());
         }else if (Prevalent.currentOnlineUser.getName() != null){
             userNameTextView.setText(Prevalent.currentOnlineUser.getName());
         }
+
         Picasso.get().load(Prevalent.currentOnlineUser.getImage()).placeholder(R.drawable.profile).into(profileImageView);
 
 //        for our content_home2_files ,we need to handle data in it
@@ -230,7 +231,7 @@ public class HomeActivity extends AppCompatActivity {
 
                         DecimalFormat df = new DecimalFormat();
                         df.setMaximumFractionDigits(2);
-                        String weight = df.format(Integer.parseInt(model.getWeight(), 10));
+                        String weight = df.format(Integer.parseInt(model.getQuantity(), 10));
 
                         holder.txtProductPrice.setText("Price: "+price+"");
                         holder.txtProductDescription.setText(model.getDescription());
@@ -256,17 +257,12 @@ public class HomeActivity extends AppCompatActivity {
                             @Override
                             public void onClick(View view) {
                                 Intent intent;
-                                Log.i("Status Animal", model.getSelectedStatus());
-                                if (model.getSelectedStatus().equals("Selected") && !typeUser.equals("Admins")){
-                                    Toast.makeText(HomeActivity.this,
-                                            "This ANIMAL is in process of being bought... Select another please",
-                                            Toast.LENGTH_SHORT).show();
-                                }else{
-                                    if (Prevalent.currentOnlineUser.getPhone().equals(model.getSellerId())  && !typeUser.equals("Admins")){
-                                        Toast.makeText(HomeActivity.this,
-                                                "You can't BUY OWN ANIMAL... Select another please",
-                                                Toast.LENGTH_SHORT).show();
-                                    }else{
+////
+//                                    if (Prevalent.currentOnlineUser.getPhone().equals(model.getSellerId())  && !typeUser.equals("Admins")){
+//                                        Toast.makeText(HomeActivity.this,
+//                                                "You can't BUY OWN DRUG... Select another please",
+//                                                Toast.LENGTH_SHORT).show();
+//                                    }else{
                                         if (typeUser.equals("Admins")) {
                                             intent = new Intent(HomeActivity.this, AdminMaintainProductActivity.class);
                                         }else {
@@ -276,8 +272,7 @@ public class HomeActivity extends AppCompatActivity {
                                         intent.putExtra("sellerName", model.getSellerName());
                                         intent.putExtra("sellerId", model.getSellerId());
                                         startActivity(intent);
-                                    }
-                                }
+//                                    }
 
                             }
                         });

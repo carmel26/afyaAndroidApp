@@ -39,21 +39,21 @@
 
         <TextView
             android:id="@+id/card_product_weight"
+            android:visibility="invisible"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
-            android:textSize="14dp"
-            android:text="Animal Weight"
-            android:textColor="@color/white"
+            android:layout_below="@+id/card_product_type"
             android:layout_marginLeft="5dp"
             android:fontFamily="@font/helveticabold"
-            android:layout_below="@+id/card_product_type"
-            />
+            android:text="Animal Weight"
+            android:textColor="@color/white"
+            android:textSize="14dp" />
 
         <TextView
             android:id="@+id/card_product_price"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/card_product_weight"
+            android:layout_below="@+id/card_product_quantity"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="10dp"
             android:gravity="center"

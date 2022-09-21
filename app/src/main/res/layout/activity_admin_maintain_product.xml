@@ -59,20 +59,20 @@
             android:textSize="14dp" />
 
 
-            <EditText
-                android:id="@+id/maintain_product_weight"
-                android:layout_below="@+id/maintain_product_description"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="30dp"
-                android:fontFamily="@font/helveticalight"
-                android:hint="Drug Height"
-                android:textAlignment="center"
-                android:padding="12dp"
-                android:layout_margin="5dp"
-                android:textColor="@color/colorPrimary"
-                android:textSize="13dp"
-                android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/maintain_product_weight"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/maintain_product_description"
+            android:layout_height="wrap_content"
+            android:hint="Drug Stock Quantity"
+            android:textAlignment="center"
+            android:fontFamily="@font/helveticalight"
+            android:textColor="@color/colorPrimary"
+            android:textSize="13dp"
+            android:padding="12dp"
+            android:layout_margin="5dp"
+            android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/maintain_product_price"

@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NewOrdersActivity">
+    tools:context=".ProductsActivity">
 
 
     <RelativeLayout
-        android:id="@+id/relativeR2"
+        android:id="@+id/relativeR3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimaryDark"
@@ -19,9 +19,9 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="10dp"
-            android:text="New Orders"
-            android:textAlignment="center"
+            android:text="Your Order"
             android:fontFamily="@font/helveticabold"
+            android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="25dp" />
 
@@ -29,12 +29,13 @@
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/orders_List"
+        android:id="@+id/products_details_List"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fontFamily="@font/helveticalight"
-        android:layout_below="@+id/relativeR2"
+        android:layout_below="@+id/relativeR3"
         >
     </androidx.recyclerview.widget.RecyclerView>
+
 
 </RelativeLayout>

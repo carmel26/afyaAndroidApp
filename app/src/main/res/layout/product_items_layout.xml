@@ -63,7 +63,7 @@
             android:layout_below="@+id/product_price"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Animal Description"
+            android:text="Drug Description"
             android:fontFamily="@font/helveticabold"
             android:textAlignment="center"
             android:textSize="14dp"
